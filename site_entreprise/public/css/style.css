@@ -1,0 +1,742 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    height: 120px;
+    z-index: 10;
+}
+
+header li {
+    background-color: #333333;
+}
+
+header ul {
+    padding: 0 !important;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+    font-family: Allura;
+    color: #333333;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+h4 {
+    font-family: Quicksand;
+    font-size: 1.6rem;
+    color: #F0C585;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+h5 {
+    font-family: Quicksand;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #F0C585;
+    margin: 0;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+}
+
+header>div,
+footer>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    max-width: 1440px;
+}
+
+header button,
+footer button {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+header a, footer a, .navTop>button {
+    color: white;
+    font-family: overpass;
+    text-decoration: none;
+    text-align: center;
+    margin: auto 0;
+}
+
+header a {
+    margin: 0;
+    padding: 0 15px 10px 0;
+}
+
+header a:visited, footer a:visited, #imgHome a:visited {
+    color: white;
+}
+
+footer {
+    /*flex: 1;*/
+    width: 100%;
+    height: 120px;
+    /*position: absolute;*/
+    bottom: 0;
+}
+/*  -------- HEADER / FOOTER -------- */
+.logo {
+    height: calc(100% - 1em);
+    padding: 0px 40px;
+}
+.navTop{
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 40px;
+}
+
+.navBottom {
+    display: grid;
+    flex-direction: column;
+    padding: 0px 40px;
+}
+
+.navReseau {
+    padding: 5px;
+}
+
+.navReseau,
+.logo {
+    align-self: center;
+}
+
+.fab {
+    font-size: xxx-large;
+}
+
+.fa-facebook-square {
+    background: -webkit-gradient(linear, left top, right top, from(#473f9e), to(#1a0dab));
+    background: linear-gradient(0deg, #473f9e, #1a0dab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-instagram {
+    background: -webkit-gradient(linear, left top, right top, from(#FA8F21), to(#8C3AAA));
+    background: linear-gradient(45deg, #FA8F21, #8C3AAA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#imgHome a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.navTop>button {
+    margin: 0;
+    padding: 0 15px 10px 0;
+    background-color: #333333;
+    border-color: #333333;
+    border: none;
+}
+
+.dropdown-toggle::after {
+    vertical-align: 0.1em;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:focus-visible {
+    background-color: #333333;
+    border-color: #333333;
+    box-shadow: none;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar-collapse .dropdown-item{
+    color: white;
+    background-color: #333333;
+}
+.navbar-collapse:hover .dropdown-item:hover{
+    background-color: #5a5a5a;
+}
+/*  ------ fin HEADER / FOOTER ------ */
+/*  -------------- HOME ------------- */
+#img1 {
+    background: url(../../public/img/homeCuisine.jpg) 0 0 no-repeat;
+}
+
+#img2 {
+    background: url(../../public/img/homeSalon.jpg) 0 0 no-repeat;
+}
+
+#img3 {
+    background: url(../../public/img/homeSdb.jpg) 0 0 no-repeat;
+}
+
+#img4 {
+    background: url(../../public/img/homeChambre.jpg) 0 0 no-repeat;
+}
+
+#img1, #img2, #img3, #img4 {
+    display: flex;
+    text-align: center;
+    height: 500px;
+    transform: skew(0deg);
+    /* width: 25%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#img1>p, #img2>p, #img3>p, #img4>p {
+    box-shadow: inset -2px 0px 8px 0px #e1b676,
+        inset 5px 0px 8px 0px #e1b676;
+    font-size: 2em;
+    align-self: flex-end;
+    width: 100%;
+    line-height: 2em;
+    margin: 0;
+    background-color: #f0c585;
+    font-family: Overpass;
+}
+
+#img1:hover, #img2:hover, #img3:hover, #img4:hover {
+    box-shadow: inset -2px 0px 8px 0px #000000,
+        inset 2px 0px 8px 0px #000000;
+}
+
+#img1:hover>p, #img2:hover>p, #img3:hover>p, #img4:hover>p {
+    box-shadow: inset -2px 0px 8px 0px #b69460,
+        inset 2px 0px 8px 0px #b69460;
+}
+
+#imgHome {
+    height: 500px;
+    /* max-width: 1440px; */
+    display: flex;
+    margin: auto
+}
+/*  ------------ Fin Home ----------- */
+/*  ------ CSS page TEAM Profil ----- */
+.card-body h5 {
+    font-family: Allura;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #333333;
+}
+
+.card {
+    border: none;
+    margin-bottom: 1.5rem;
+    margin: 2rem;
+}
+
+.card-img-top {
+    border: 0.4rem solid #F0C585;
+    border-radius: 50%;
+}
+
+.card-text-2 {
+    margin-bottom: 3rem;
+}
+
+form .btn, .card-body .btn {
+    background-color: white;
+    color:#F0C585;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border: 0.2rem solid #F0C585;
+}
+
+form .btn:hover, .card-body .btn:hover {
+    background-color: #F0C585;
+    color:white;
+    font-weight: 600;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border: 0.2rem solid #F0C585;
+}
+
+.title-page {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    height: 2.5rem;
+    background-color: #F0C585;
+    max-width: 20rem;
+}
+  
+h1 .translate-middle {
+    transform: translate(-50%,-45%)!important;
+}
+
+.card-text-2 strong {
+    color: #F0C585;
+}
+
+.card-text-2 a {
+    font-style: italic;
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+}
+
+.card-text-2 a:hover{
+    font-style: italic;
+    text-decoration: #F0C585;
+    color: #ecaa47;
+    font-weight: 500;
+}
+
+.card-text-2 p {
+    color: #333333;
+}
+
+.card-text-2 strong {
+    font-weight: 400;
+    color: #333333;
+}
+.card-text-2 .name-job {
+    font-weight: 600;
+    color: #F0C585;
+}
+
+.card-text-2 span {
+    font-weight: 600;
+    color: #F0C585;
+}
+/*  ------ Fin CSS page TEAM Profil ----- */
+/* -------------CSS page CV -------------- */
+
+@media queries
+
+.main-contain-cv {
+    background-color: white;
+    background-image: url(../img/background/geometric-background-v3.svg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    margin-bottom: 4rem;
+}
+
+
+.bloc-title-cv h1 {
+    text-align: center;
+    margin: auto;
+    color: #F0C585;
+    font-family: Quicksand;
+    font-weight: 500;
+    font-size:  3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+
+#name-cv {
+    font-size: 32px;
+    color: #333333;
+    font-weight: 500;
+    font-family: Allura;
+}
+
+.bloc-title-cv {
+    width: fit-content;
+    margin-top: 3rem;
+}
+
+.bloc-title-cv img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 0.4rem solid #333333;
+}
+
+.presentation {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-family: Overpass;
+    font-size: 1.2rem;
+    /* padding-left: 20%;
+    padding-right: 20%; */
+}
+
+.presentation h2 {
+    font-family: Quicksand;
+    font-weight: 500 ;
+    display: inline;
+    border: 0.2rem solid #F0C585;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: left;
+}
+
+.presentation p {
+    margin-top: 1.6rem;
+    color: #333333;
+    font-family: Overpass;
+}
+
+.main-contain-cv h2 {
+    font-family: Quicksand;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #333333;
+    border: 0.2rem solid #F0C585;
+    width: fit-content;
+    padding: 0.3rem;
+    border-bottom-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+}
+
+.container-comp {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: left;
+    margin-right: 12%;
+}
+
+/* .bloc-skill {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+} */
+
+.main-contain-cv h2 {
+    margin-bottom: 2rem;
+}
+
+.container-comp ul {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Overpass;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.title-skills {
+    color: #F0C585;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 1.6rem;
+}
+
+.skills {
+    color: #F0C585;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container-exp {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+.dates-exp {
+    font-family: Quicksand;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.paragraph {
+    padding-right: 2.5rem;
+}
+
+.paragraph p {
+    font-family: Overpass;
+    font-size: 1.2rem;
+}
+
+.experiences {
+    margin-left: 20%;
+    padding-right: 1.5rem;
+}
+
+.formations {
+    margin-left: 20%;
+}
+
+.dates-formation {
+    width: 30%;
+    font-family: Quicksand;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-right: 1rem;
+}
+
+.title-formation {
+    font-family: Quicksand;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #F0C585;
+}
+
+.school-formation {
+    font-family: Overpass;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 400;
+}
+
+/* ---------------- Fin CSS page CV ------------------ */
+
+.bloc-skills h1 {
+    text-align: left;
+    margin: auto;
+    color: #F0C585;
+    font-family: Quicksand;
+    font-size:  42px;
+    font-weight: 500;
+}
+
+h1 .name-cv {
+    font-size: 32px;
+    color: #333333;
+    font-weight: 500;
+    font-family: Allura;
+}
+
+.top-title img {
+    width: 35%;
+    border: 4px solid #F0C585;
+    padding: 0;
+    border-radius: 50%;
+}
+
+
+/* Extra large devices (large desktops, 1200px and up)*/
+/* @media (min-width: 1439.98px) {
+
+    #body-cv {
+        background-color: white;
+        background-image: url(../img/background/geometric-background-max-screen.svg);
+        background-size: 100vw;
+        background-repeat: no-repeat;
+        background-position: top center;
+        margin: 0rem;
+    }
+
+    #main-cv {
+        max-width: 980px;
+        margin: auto;
+    }
+
+    .bloc-title-cv {
+        margin-top: 1%;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-cv {
+        margin-top: 4rem;
+        margin-left: auto;
+    }
+
+    .title-cv h1 {
+        text-align: left;
+        margin: auto;
+        color: #F0C585;
+        font-family: Quicksand;
+        font-weight: 500;
+        font-size:  42px;
+    }
+
+    .name-cv {
+        font-size: 32px;
+        color: #333333;
+        font-weight: 500;
+        font-family: Allura;
+    }
+
+    .portrait-cv {
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        border: 8px solid #333333;
+        margin-top: 3rem;
+    }
+
+    .presentation {
+        margin-bottom: 4rem;
+        font-family: Overpass;
+        font-size: 1.2rem;
+        /* padding-left: 20%;
+        padding-right: 20%; 
+    }*/
+
+    /* .presentation h2 {
+        font-family: Quicksand;
+        font-weight: 500 ;
+        display: inline;
+        border: 0.2rem solid #F0C585;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.4rem;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .presentation p {
+        margin-top: 1.6rem;
+        color: #333333;
+        font-family: Overpass;
+    }
+
+    #main-cv h2 {
+        font-family: Quicksand;
+        font-weight: 500;
+        font-size: 2rem;
+        color: #F0C585;
+        border: 0.2rem solid #F0C585;
+        width: fit-content;
+        padding: 0.3rem;
+        border-bottom-left-radius: 0.6rem;
+        border-top-right-radius: 0.6rem;
+    }
+
+    .container-comp {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: left;
+        margin-right: 12%;
+    }
+
+    .bloc-skill {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+
+    .skill-contain {
+        margin-left: 20%;
+    }
+
+    .container-comp ul {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Overpass;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .title-skills {
+        color: #F0C585;
+        text-align: center;
+        font-family: Quicksand;
+        font-size: 1.6rem;
+    }
+
+    .skills {
+        color: #F0C585;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .container-exp {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5rem;
+    }
+
+    .dates-exp {
+        font-family: Quicksand;
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+
+    .paragraph {
+        padding-right: 2.5rem;
+    }
+
+    .paragraph p {
+        font-family: Overpass;
+        font-size: 1.2rem;
+    }
+
+    .experiences {
+        margin-left: 20%;
+        padding-right: 1.5rem;
+    }
+
+    .formations {
+        margin-left: 20%;
+    }
+
+    .dates-formation {
+        width: 30%;
+        font-family: Quicksand;
+        font-size: 1.2rem;
+        font-weight: 800;
+        padding-right: 1rem;
+    }
+
+    .title-formation {
+        font-family: Quicksand;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #F0C585;
+    }
+
+    .school-formation {
+        font-family: Overpass;
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 400;
+    }
+
+} */
+
+@media ( max-width: 1439.98px ) {
+        header:first-child {
+            padding: 0px 40px;
+        }
+   }
+/* ---------------- Fin CSS page CV ------------------ */
+@media (max-width: 599.98px){
+    header, footer,
+    header>div, footer>div {
+        height: 65px;
+    }
+
+    .logo {
+        height: 95%;
+        padding: 0px 5px;
+    }
+
+    .navTop {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar {
+
+        display: flex;
+        justify-content: flex-end;
+    }
+}

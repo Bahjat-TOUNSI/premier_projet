@@ -1,0 +1,209 @@
+#body-cv {
+    background-color: white;
+    background-image: url(./../img/geometric-background.svg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: -251px -317px;
+    margin: 0rem;
+}
+
+.main-container-cv {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.bloc-title-cv {
+    margin-top: 5rem;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-cv {
+    margin-top: 0rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title-cv h1 {
+    text-align: left;
+    margin: auto;
+    color: #F0C585;
+    font-family: Quicksand;
+    font-weight: 500;
+    font-size:  42px;
+    background-color: white;
+    padding-top: 2rem;
+}
+
+#name-cv {
+    font-size: 32px;
+    color: black;
+    font-weight: 500;
+    background-color: white;
+    font-family: Allura;
+}
+
+.portrait-cv {
+    width: 15%;
+    margin: auto;
+    border-radius: 50%;
+    border: 8px solid #333333;
+}
+
+.presentation {
+    margin-right: 32%;
+    margin-left: 32%;
+    margin-bottom: 4rem;
+    font-family: Overpass;
+    font-size: 1.2rem;
+    
+}
+
+.presentation h2 {
+    font-family: Quicksand;
+    display: inline;
+    border: 0.2rem solid #F0C585;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: white;
+}
+
+.presentation p {
+    margin-top: 1.6rem;
+    color: #333333;
+    font-family: Overpass;
+}
+
+h2 {
+    font-family: Quicksand;
+    font-size: 2rem;
+    color: black;
+    border: 0.2rem solid #F0C585;
+    width: fit-content;
+    padding: 0.3rem;
+    border-bottom-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+    background-color: white;
+}
+
+.skill-contain h2 {
+    margin-left: 32%;
+}
+
+.container-comp {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-right: 12%;
+}
+
+.bloc-skill {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.container-comp ul {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.title-skills {
+    color: #F0C585;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 1.6rem;
+}
+
+.skills {
+    color: #F0C585;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.formations {
+    margin-left: 32%;
+}
+
+.container-exp {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+h4 {
+    font-family: Quicksand;
+    font-size: 1.6rem;
+    color: #F0C585;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+h5 {
+    font-family: Quicksand;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #F0C585;
+    margin: 0;
+}
+
+.dates-exp {
+    font-family: Quicksand;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.paragraph {
+    padding-right: 2.5rem;
+}
+
+.paragraph, p {
+    font-family: Roboto;
+    font-size: 1.2rem;
+}
+
+.experiences {
+    margin-left: 32%;
+    padding-right: 1.5rem;
+}
+
+.formations {
+    width:50%;
+}
+
+.dates-formation {
+    width: 30%;
+    font-family: Quicksand;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.title-formation {
+    font-family: Quicksand;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #F0C585;
+}
+
+.school-formation {
+    font-family: Roboto;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 400;
+}
+
+.paragraph p {
+    background-color: white;
+    display: inline;
+}
+
