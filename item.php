@@ -1,7 +1,7 @@
 <?php
 $nom = "Pixel 6";
 $prix = "650 €";
-$url_photo = "https://img.bfmtv.com/c/0/0/8b1/cd25eee37881f860bbd6b322f3c0c.jpg";
+$url_photo = "https://lh3.googleusercontent.com/U4oy7mIHVbKjUOFKnSRndg_oTOP7rLOaiEUo7U6eNEU18hTMlPSqJEGcd9G5YtV2BG27KB7snleH5QZB73J08o8ctjwcYacxGbwT";
 include 'header.php';
 
 
