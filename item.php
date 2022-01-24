@@ -1,16 +1,16 @@
 <?php
-$nom = "Pixel 6";
-$prix = "650 €";
-$url_photo = "https://lh3.googleusercontent.com/U4oy7mIHVbKjUOFKnSRndg_oTOP7rLOaiEUo7U6eNEU18hTMlPSqJEGcd9G5YtV2BG27KB7snleH5QZB73J08o8ctjwcYacxGbwT";
+$name = "Pixel 6";
+$price = "650 €";
+$url_image = "https://lh3.googleusercontent.com/U4oy7mIHVbKjUOFKnSRndg_oTOP7rLOaiEUo7U6eNEU18hTMlPSqJEGcd9G5YtV2BG27KB7snleH5QZB73J08o8ctjwcYacxGbwT";
 include 'header.php';
 
 
 echo "<br><br>";
-echo $nom;
+echo $name;
 echo "<br><br>";
-echo $prix;
+echo $price;
 echo "<br><br>";
-echo "<img src=\"$url_photo\" alt=\"pixel 6 picture\">";
+echo "<img src=\"$url_image\" alt=\"pixel 6 picture\">";
 echo "<br><br>";
 
 
