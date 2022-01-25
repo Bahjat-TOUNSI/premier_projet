@@ -4,6 +4,7 @@ include 'header.php';
 
 $products = ["iPhone", "iPad", "iMac"];
 
+echo '<pre>';
 print "Tableau fournis:" . "<br>";
 print_r($products);
 
