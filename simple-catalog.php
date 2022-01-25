@@ -1,9 +1,18 @@
 <?php
-
+include 'header.php';
 
 $products = ["iPhone", "iPad", "iMac"];
 sort($products);
 
-foreach ($products as $key => $val) {
-    echo $val . "\n";
+
+
+foreach ($products as $val) {
+    echo $val . "\n" . "<br><br>";
 }
+
+
+
+
+
+
+include 'footer.php';
