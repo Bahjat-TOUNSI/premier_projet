@@ -6,7 +6,11 @@ $products = ["iPhone", "iPad", "iMac"];
 
 echo '<pre>';
 print "Tableau fournis:" . "<br>";
-print_r($products);
+foreach($products as $value){
+    print $value."\n";
+}
+
+
 
 print "<br><br>";
 
