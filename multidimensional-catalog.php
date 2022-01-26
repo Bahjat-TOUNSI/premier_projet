@@ -33,9 +33,4 @@ print_r($products);
 
 
 
-
-
-
-
-
 include 'footer.php';
