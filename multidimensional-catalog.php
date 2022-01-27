@@ -32,12 +32,17 @@ foreach($products as $key => $product) {
         print $item . "\n";
     }
     print "<br><br>";
+
     echo "Prix pas en centimes:";
     formatPrice($product['price']);
     print "<br><br>";
 
     echo "Prix en HT:";
     priceExcludingVAT($product['price']);
+    print "<br><br>";
+
+    echo "Prix discount:";
+    formatPrice($product['price']);
     print "<br><br>";
 }
 
