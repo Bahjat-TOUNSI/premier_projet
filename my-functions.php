@@ -1,5 +1,5 @@
 <?php
 
 function formatPrice($price){
-echo $price / 100;
+    echo "<h5>" . $price / 100 . "</h5>";
 }

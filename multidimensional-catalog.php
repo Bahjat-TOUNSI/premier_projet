@@ -27,11 +27,16 @@ $products = [
 ];
 echo '<pre>';
 
-foreach($products as $key => $value1) {
-    foreach ($value1 as $value2) {
-        print $value2 . "\n";
+foreach($products as $key => $product) {
+    foreach ($product as $item) {
+        print $item . "\n";
     }
+    print "<br><br>";
+    echo "Prix pas en centimes:";
+    formatPrice($product['price']);
+    print "<br><br>";
 }
+
 
 
 

@@ -3,6 +3,7 @@
 include 'header.php';
 include 'my-functions.php';
 
+
 $iphone = [
     "name" => "iPhone",
     "price" => 45000,
@@ -26,11 +27,26 @@ $imac = [
     "discount" => 0,
     "picture_url" => "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000",
 ];
+
+
 echo '<pre>';
 print_r($imac);
 print "<br><br>";
 print_r($ipad);
 print "<br><br>";
 print_r($iphone);
+print "<br><br>";
+
+echo "Prix pas en centimes iphone:";
+formatPrice($iphone['price']);
+print "<br><br>";
+echo "Prix pas en centimes ipad:";
+formatPrice($ipad['price']);
+print "<br><br>";
+echo "Prix pas en centimes imac:";
+formatPrice($imac['price']);
+print "<br><br>";
+
+
 
 include 'footer.php';
