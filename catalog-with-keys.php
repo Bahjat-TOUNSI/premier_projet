@@ -47,6 +47,15 @@ echo "Prix pas en centimes imac:";
 formatPrice($imac['price']);
 print "<br><br>";
 
+echo "Prix HT iphone:";
+priceExcludingVAT($iphone['price']);
+print "<br><br>";
+echo "Prix HT ipad:";
+priceExcludingVAT($ipad['price']);
+print "<br><br>";
+echo "Prix HT imac:";
+priceExcludingVAT($imac['price']);
+print "<br><br>";
 
 
 include 'footer.php';

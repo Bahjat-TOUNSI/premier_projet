@@ -35,6 +35,10 @@ foreach($products as $key => $product) {
     echo "Prix pas en centimes:";
     formatPrice($product['price']);
     print "<br><br>";
+
+    echo "Prix en HT:";
+    priceExcludingVAT($product['price']);
+    print "<br><br>";
 }
 
 
