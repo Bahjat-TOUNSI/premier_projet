@@ -1,6 +1,7 @@
 <?php
 
 include 'header.php';
+include 'my-functions.php';
 
 $iphone = [
     "name" => "iPhone",

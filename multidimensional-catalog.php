@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-
+include 'my-functions.php';
 
 $products = [
     "iphone" => [
