@@ -48,6 +48,7 @@ foreach($products as $key => $product) {
   print "<br><br>";
 }
 
+
 include "footer.php";
 
 
