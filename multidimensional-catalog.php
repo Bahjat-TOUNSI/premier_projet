@@ -1,4 +1,7 @@
 <?php
+require "bootstraplinks.php";
+include "header.php";
+include "my-functions.php";
 
 $products = [
     "iphone" => [
@@ -24,28 +27,28 @@ $products = [
     ]
 ];
 
-//echo '<pre>';
+echo '<pre>';
 
-//foreach($products as $key => $product) {
-//  foreach ($product as $item) {
-//      print $item . "\n";
-//   }
-//  print "<br><br>";
+foreach($products as $key => $product) {
+  foreach ($product as $item) {
+      print $item . "\n";
+   }
+  print "<br><br>";
 
-//  echo "Prix pas en centimes:";
-//  formatPrice($product['price']);
-//  print "<br><br>";
+  echo "Prix pas en centimes:";
+  formatPrice($product['price']);
+  print "<br><br>";
 
-//  echo "Prix en HT:";
-//  echo priceExcludingVAT($product['price']);
-//  print "<br><br>";
+  echo "Prix en HT:";
+  echo priceExcludingVAT($product['price']);
+  print "<br><br>";
 
-//  echo "Prix discount:";
-//  formatPrice($product['price']);
-//  print "<br><br>";
-//}
+     echo "Prix discount:";
+  formatPrice($product['price']);
+  print "<br><br>";
+}
 
-
+include "footer.php";
 
 
 
