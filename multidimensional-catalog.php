@@ -38,7 +38,7 @@ foreach($products as $key => $product) {
     print "<br><br>";
 
     echo "Prix en HT:";
-    priceExcludingVAT($product['price']);
+    echo priceExcludingVAT($product['price']);
     print "<br><br>";
 
     echo "Prix discount:";

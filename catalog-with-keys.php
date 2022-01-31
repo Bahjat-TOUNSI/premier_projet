@@ -41,7 +41,7 @@ echo "Prix pas en centimes iphone:";
 formatPrice($iphone['price']);
 
 echo "Prix HT iphone:";
-priceExcludingVAT($iphone['price']);
+echo priceExcludingVAT($iphone['price']);
 
 echo "Prix discount 25%:";
 displayDiscountedPrice($iphone['price']);
@@ -51,7 +51,7 @@ echo "Prix pas en centimes ipad:";
 formatPrice($ipad['price']);
 
 echo "Prix HT ipad:";
-priceExcludingVAT($ipad['price']);
+echo priceExcludingVAT($ipad['price']);
 
 echo "Prix discount 25%:";
 displayDiscountedPrice($ipad['price']);
@@ -61,7 +61,7 @@ echo "Prix pas en centimes imac:";
 formatPrice($imac['price']);
 
 echo "Prix HT imac:";
-priceExcludingVAT($imac['price']);
+echo priceExcludingVAT($imac['price']);
 
 echo "Prix discount 25%:";
 displayDiscountedPrice($imac['price']);
