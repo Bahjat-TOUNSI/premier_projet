@@ -2,6 +2,7 @@
 
 include 'header.php';
 include 'my-functions.php';
+include 'index.html';
 
 
 $iphone = [

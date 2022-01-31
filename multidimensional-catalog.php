@@ -1,6 +1,4 @@
 <?php
-include 'header.php';
-include 'my-functions.php';
 
 $products = [
     "iphone" => [
@@ -25,30 +23,32 @@ $products = [
         "picture_url" => "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000",
     ]
 ];
-echo '<pre>';
 
-foreach($products as $key => $product) {
-    foreach ($product as $item) {
-        print $item . "\n";
-    }
-    print "<br><br>";
+//echo '<pre>';
 
-    echo "Prix pas en centimes:";
-    formatPrice($product['price']);
-    print "<br><br>";
+//foreach($products as $key => $product) {
+//  foreach ($product as $item) {
+//      print $item . "\n";
+//   }
+//  print "<br><br>";
 
-    echo "Prix en HT:";
-    echo priceExcludingVAT($product['price']);
-    print "<br><br>";
+//  echo "Prix pas en centimes:";
+//  formatPrice($product['price']);
+//  print "<br><br>";
 
-    echo "Prix discount:";
-    formatPrice($product['price']);
-    print "<br><br>";
-}
+//  echo "Prix en HT:";
+//  echo priceExcludingVAT($product['price']);
+//  print "<br><br>";
 
-
-
+//  echo "Prix discount:";
+//  formatPrice($product['price']);
+//  print "<br><br>";
+//}
 
 
 
-include 'footer.php';
+
+
+
+
+
