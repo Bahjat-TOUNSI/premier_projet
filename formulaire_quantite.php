@@ -5,11 +5,15 @@
     include 'header.php';
     //include "my-functions.php";
     global $products;
+    global $product;
     global $iphone;
     global $ipad;
     global $imac;
+
+
     /* for test to PHP if not hosted */ //require('my-functions.php');
 ?>
+
 <div class="container mt-2 mb-5">
     <div class="contentbar">
         <!-- Start row -->
@@ -24,7 +28,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-10 col-xl-8">
                                 <div class="cart-container">
-                                         <form method="get">
+                                         <form method="post" action="cart.php">
                                     <div class="cart-head">
                                         <div class="table-responsive">
                                             <table class="table table-borderless">
@@ -33,31 +37,56 @@
                                                         <th scope="col">Product</th>
                                                         <th scope="col">Price</th>
                                                         <th scope="col">Quantity</th>
-                                                        <th scope="col" class="text-right">Total</th>
+
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                 <tr>
                                                 <td>
                                                     <?php
-                                                        echo $iphone['name'] . "<br>";
+                                                    foreach($products as $key => $product){
+                                                        echo $product['name'] . "<br>";
+                                                    }
                                                     ?>
                                                 </td>
                                                     <td>
                                                         <?php
-                                                            echo formatPrice($iphone['price']) . "<br>";
+                                                        foreach($products as $key => $product){
+                                                            echo formatPrice($product['price']) . "<br>";
+                                                        }
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php
-                                                           echo ' <div class="form-group mb-0">';
-                                                        echo '<input min="0" name="quantity" value="1" type="number">';
-                                                       echo '</div>';
+                                                        foreach ($products as $key => $product){
+                                                            echo ' <div class="form-group mb-0">';
+                                                            echo  "<input min='0' name='.$key.' type='number'>";
+                                                            echo '</div>';
+
+                                                            var_dump($key);
+                                                                                                                    }
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php
-                                                        echo totalProductPrice($_GET['quantity'], $iphone['price']);
+                                                        //foreach ($ as $key => $quantity){
+                                                           // var_dump($key);
+                                                           // var_dump($quantity);
+                                                            //echo totalProductPrice(intval($quantity), $product[$key]['price']);
+                                                       // }
+                                                       // var_dump($_GET);
+                                                       // var_dump($key);
+                                                        //foreach($products as $key => $product){
+                                                           // if ($product['name'] === "iPhone"){
+                                                           // echo totalProductPrice(intval($_GET[$key]), $product['price']);
+                                                            //}
+                                                           // elseif ($product['name'] === "iPad"){
+                                                               // echo totalProductPrice($_GET[$key], $product['price']);
+                                                           // }
+                                                           // elseif ($product['name'] === "iMac"){
+                                                              //  echo totalProductPrice($_GET[$key], $product['price']);
+                                                           // }
+                                                       // }
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -66,104 +95,102 @@
                                         </div>
                                     </div>
                                     <div class="cart-footer text-right">
-                                        <button type="submit" name="submit" class="btn btn-info my-1"><i
+                                        <button type="submit" class="btn btn-info my-1"><i
                                                 class="ri-save-line mr-2"></i>Validation</button>
                                     </div>
                                          </form>
-                                    <form method="get">
-                                        <div class="cart-head">
-                                            <div class="table-responsive">
-                                                <table class="table table-borderless">
-                                                    <thead>
-                                                    <tr>
-                                                        <th scope="col">Product</th>
-                                                        <th scope="col">Price</th>
-                                                        <th scope="col">Quantity</th>
-                                                        <th scope="col" class="text-right">Total</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <?php
-                                                                echo $ipad['name'] . "<br>";
-                                                            ?>
-                                                        </td>
-                                                        <td>
-                                                            <?php
-                                                                echo formatPrice($ipad['price']) . "<br>";
-                                                            ?>
-                                                        </td>
-                                                        <td>
-                                                            <?php
-                                                                echo ' <div class="form-group mb-0">';
-                                                                echo '<input min="0" name="quantity" value="1" type="number">';
-                                                                echo '</div>';
-                                                            ?>
-                                                        <td>
-                                                            <?php
-                                                            echo totalProductPrice($_GET['quantity'], $ipad['price']);
-                                                            ?>
-                                                        </td>
-
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="cart-footer text-right">
-                                            <button type="submit" name="submit" class="btn btn-info my-1"><i
-                                                        class="ri-save-line mr-2"></i>Validation</button>
-                                        </div>
-                                    </form>
-                                    <form method="get">
-                                        <div class="cart-head">
-                                            <div class="table-responsive">
-                                                <table class="table table-borderless">
-                                                    <thead>
-                                                    <tr>
-                                                        <th scope="col">Product</th>
-                                                        <th scope="col">Price</th>
-                                                        <th scope="col">Quantity</th>
-                                                        <th scope="col" class="text-right">Total</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <?php
-//                                                            foreach($products as $key => $product){
-                                                                echo $imac['name'] . "<br>";
-                                                            //}
-                                                            ?>
-                                                        </td>
-                                                        <td>
-                                                            <?php
-                                                                echo formatPrice($imac['price']) . "<br>";
-                                                            ?>
-                                                        </td>
-                                                        <td>
-                                                            <?php
-                                                                echo ' <div class="form-group mb-0">';
-                                                                echo '<input min="0" name="quantity" value="1" type="number">';
-                                                                echo '</div>';
-                                                            ?>
-                                                        <td>
-                                                            <?php
-                                                            echo totalProductPrice($_GET['quantity'], $imac['price']);
-                                                            ?>
-                                                        </td>
-
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="cart-footer text-right">
-                                            <button type="submit" name="submit" class="btn btn-info my-1"><i
-                                                        class="ri-save-line mr-2"></i>Validation</button>
-                                        </div>
-                                    </form>
+<!--                                    <form method="get">-->
+<!--                                        <div class="cart-head">-->
+<!--                                            <div class="table-responsive">-->
+<!--                                                <table class="table table-borderless">-->
+<!--                                                    <thead>-->
+<!--                                                    <tr>-->
+<!--                                                        <th scope="col">Product</th>-->
+<!--                                                        <th scope="col">Price</th>-->
+<!--                                                        <th scope="col">Quantity</th>-->
+<!--                                                        <th scope="col" class="text-right">Total</th>-->
+<!--                                                    </tr>-->
+<!--                                                    </thead>-->
+<!--                                                    <tbody>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>-->
+<!--                                                            --><?php
+//                                                                echo $ipad['name'] . "<br>";
+//                                                            ?>
+<!--                                                        </td>-->
+<!--                                                        <td>-->
+<!--                                                            --><?php
+//                                                                echo formatPrice($ipad['price']) . "<br>";
+//                                                            ?>
+<!--                                                        </td>-->
+<!--                                                        <td>-->
+<!--                                                            --><?php
+//                                                                echo ' <div class="form-group mb-0">';
+//                                                                echo '<input min="0" name="quantity" value="1" type="number">';
+//                                                                echo '</div>';
+//                                                            ?>
+<!--                                                        <td>-->
+<!--                                                            --><?php
+//                                                            echo totalProductPrice($_GET['quantity'], $ipad['price']);
+//                                                            ?>
+<!--                                                        </td>-->
+<!--                                                    </tr>-->
+<!--                                                    </tbody>-->
+<!--                                                </table>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="cart-footer text-right">-->
+<!--                                            <button type="submit" name="submit" class="btn btn-info my-1"><i-->
+<!--                                                        class="ri-save-line mr-2"></i>Validation</button>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
+<!--                                    <form method="get">-->
+<!--                                        <div class="cart-head">-->
+<!--                                            <div class="table-responsive">-->
+<!--                                                <table class="table table-borderless">-->
+<!--                                                    <thead>-->
+<!--                                                    <tr>-->
+<!--                                                        <th scope="col">Product</th>-->
+<!--                                                        <th scope="col">Price</th>-->
+<!--                                                        <th scope="col">Quantity</th>-->
+<!--                                                        <th scope="col" class="text-right">Total</th>-->
+<!--                                                    </tr>-->
+<!--                                                    </thead>-->
+<!--                                                    <tbody>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>-->
+<!--                                                            --><?php
+////                                                            foreach($products as $key => $product){
+//                                                                echo $imac['name'] . "<br>";
+//                                                            //}
+//                                                            ?>
+<!--                                                        </td>-->
+<!--                                                        <td>-->
+<!--                                                            --><?php
+//                                                                echo formatPrice($imac['price']) . "<br>";
+//                                                            ?>
+<!--                                                        </td>-->
+<!--                                                        <td>-->
+<!--                                                            --><?php
+//                                                                echo ' <div class="form-group mb-0">';
+//                                                                echo '<input min="0" name="quantity" value="1" type="number">';
+//                                                                echo '</div>';
+//                                                            ?>
+<!--                                                        <td>-->
+<!--                                                            --><?php
+//                                                            echo totalProductPrice($_GET['quantity'], $imac['price']);
+//                                                            ?>
+<!--                                                        </td>-->
+<!--                                                    </tr>-->
+<!--                                                    </tbody>-->
+<!--                                                </table>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="cart-footer text-right">-->
+<!--                                            <button type="submit" name="submit" class="btn btn-info my-1"><i-->
+<!--                                                        class="ri-save-line mr-2"></i>Validation</button>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
                                 </div>
                             </div>
                         </div>

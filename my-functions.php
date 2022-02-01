@@ -14,5 +14,5 @@ function displayDiscountedPrice($promo){
 }
 
 function totalProductPrice($quantity, $price){
-    return($quantity * $price) / 100 ;
+    return ($quantity * $price) / 100;
 }
