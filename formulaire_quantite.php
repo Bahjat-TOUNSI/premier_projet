@@ -18,7 +18,7 @@
                             <div class="col-lg-10 col-xl-8">
                                 <div class="cart-container">
                                     <?php
-                                        echo "<form method=\"post\" action=\"card.php\">";
+                                        echo "<form method=\"get\" action=\"cart.php\">";
                                     ?>
                                     <div class="cart-head">
                                         <div class="table-responsive">
@@ -34,13 +34,20 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                <th>
                                                     <?php
-
-                                                    //foreach($products as $key => $product){
-                                                    //formatPrice($product['price']);
-                                                   // }
-                                                        //popBooksOnArray($books);
+//                                                    foreach($products as $key => $product){
+//                                                        echo $product['name'] . "<br>";
+//                                                    }
                                                     ?>
+                                                </th>
+                                                <th>
+                                                    <?php
+                                                       foreach($products as $key => $product){
+                                                        echo $product['picture_url'] . "<br>";
+                                                        }
+                                                    ?>
+                                                </th>
                                                 </tbody>
                                             </table>
                                         </div>
