@@ -1,6 +1,8 @@
 <?php
     include('multidimensional-catalog.php');
     include 'catalog-with-keys.php';
+    include 'bootstraplinks.php';
+    include 'header.php';
     //include "my-functions.php";
     global $products;
     global $iphone;
@@ -22,7 +24,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-10 col-xl-8">
                                 <div class="cart-container">
-                                         <form method="get" action="cart.php">
+                                         <form method="get">
                                     <div class="cart-head">
                                         <div class="table-responsive">
                                             <table class="table table-borderless">
@@ -53,6 +55,11 @@
                                                        echo '</div>';
                                                         ?>
                                                     </td>
+                                                    <td>
+                                                        <?php
+                                                        echo totalProductPrice($_GET['quantity'], $iphone['price']);
+                                                        ?>
+                                                    </td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -63,7 +70,7 @@
                                                 class="ri-save-line mr-2"></i>Validation</button>
                                     </div>
                                          </form>
-                                    <form method="get" action="cart.php">
+                                    <form method="get">
                                         <div class="cart-head">
                                             <div class="table-responsive">
                                                 <table class="table table-borderless">
@@ -93,6 +100,11 @@
                                                                 echo '<input min="0" name="quantity" value="1" type="number">';
                                                                 echo '</div>';
                                                             ?>
+                                                        <td>
+                                                            <?php
+                                                            echo totalProductPrice($_GET['quantity'], $ipad['price']);
+                                                            ?>
+                                                        </td>
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -104,7 +116,7 @@
                                                         class="ri-save-line mr-2"></i>Validation</button>
                                         </div>
                                     </form>
-                                    <form method="get" action="cart.php">
+                                    <form method="get">
                                         <div class="cart-head">
                                             <div class="table-responsive">
                                                 <table class="table table-borderless">
@@ -136,6 +148,11 @@
                                                                 echo '<input min="0" name="quantity" value="1" type="number">';
                                                                 echo '</div>';
                                                             ?>
+                                                        <td>
+                                                            <?php
+                                                            echo totalProductPrice($_GET['quantity'], $imac['price']);
+                                                            ?>
+                                                        </td>
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -158,3 +175,5 @@
         <!-- End row -->
     </div>
 </div>
+<?php
+include  'footer.php';

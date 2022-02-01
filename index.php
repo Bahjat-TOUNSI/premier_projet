@@ -15,7 +15,7 @@
         //require('multidimensional-catalog.php');
         include "header.php";
         //include "books.php";
-        include "formulaire_quantite.php";
+        //include "formulaire_quantite.php";
         include "footer.php";
     ?>
 

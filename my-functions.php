@@ -13,3 +13,6 @@ function displayDiscountedPrice($promo){
     echo "<h5>" . ($promo / 100) * 0.25 . "</h5>";
 }
 
+function totalProductPrice($quantity, $price){
+    return($quantity * $price) / 100 ;
+}
