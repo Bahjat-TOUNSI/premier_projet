@@ -105,7 +105,7 @@
                                                             echo totalProductPrice($_GET['quantity'], $ipad['price']);
                                                             ?>
                                                         </td>
-                                                        </td>
+
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -153,7 +153,7 @@
                                                             echo totalProductPrice($_GET['quantity'], $imac['price']);
                                                             ?>
                                                         </td>
-                                                        </td>
+
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -177,3 +177,4 @@
 </div>
 <?php
 include  'footer.php';
+?>
