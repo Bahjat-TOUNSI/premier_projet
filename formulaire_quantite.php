@@ -1,5 +1,6 @@
 <?php
     include('multidimensional-catalog.php');
+    //include "my-functions.php";
     global $products;
     /* for test to PHP if not hosted */ //require('my-functions.php');
 ?>
@@ -25,29 +26,38 @@
                                             <table class="table table-borderless">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col"></th>
-                                                        <th scope="col"></th>
                                                         <th scope="col">Product</th>
-                                                        <th scope="col">Qty</th>
                                                         <th scope="col">Price</th>
+                                                        <th scope="col">Quantity</th>
                                                         <th scope="col" class="text-right">Total</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                <th>
-                                                    <?php
-//                                                    foreach($products as $key => $product){
-//                                                        echo $product['name'] . "<br>";
-//                                                    }
-                                                    ?>
-                                                </th>
-                                                <th>
+                                                <tr>
+                                                <td>
                                                     <?php
                                                        foreach($products as $key => $product){
-                                                        echo $product['picture_url'] . "<br>";
-                                                        }
+                                                        echo $product['name'] . "<br>";
+                                                       }
                                                     ?>
-                                                </th>
+                                                </td>
+                                                    <td>
+                                                        <?php
+                                                        foreach($products as $key => $product){
+                                                            echo formatPrice($product['price']) . "<br>";
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php
+                                                        foreach ($products as $key => $product){
+                                                           echo ' <div class="form-group mb-0">';
+                                                        echo '<input min="0" name="quantity" value="1" type="number">';
+                                                       echo '</div>';
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                </tr>
                                                 </tbody>
                                             </table>
                                         </div>

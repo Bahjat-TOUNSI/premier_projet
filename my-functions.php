@@ -1,7 +1,7 @@
 <?php
 
 function formatPrice($price){
-    echo "<h5>" . $price / 100 . "</h5>";
+    echo  $price / 100 ;
 }
 
 function priceExcludingVAT($noVat): string
@@ -12,3 +12,4 @@ function priceExcludingVAT($noVat): string
 function displayDiscountedPrice($promo){
     echo "<h5>" . ($promo / 100) * 0.25 . "</h5>";
 }
+
