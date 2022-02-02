@@ -1,7 +1,7 @@
 <?php
 
 function formatPrice($price){
-    echo  $price / 100 ;
+    echo  $price / 100 . " €" ;
 }
 
 function priceExcludingVAT($noVat): string

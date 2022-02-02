@@ -1,14 +1,13 @@
 <?php
 //echo "Quantity ordered: " . $_GET['quantity'];
-include('multidimensional-catalog.php');
-include 'catalog-with-keys.php';
+include 'multidimensional-catalog.php';
+//include 'catalog-with-keys.php';
 include 'bootstraplinks.php';
 include 'header.php';
 global $products;
 global $product;
-global $iphone;
-global $ipad;
-global $imac;
+
+//print_r($_POST);
 ?>
 
 <div class="container mt-2 mb-5">
@@ -41,23 +40,39 @@ global $imac;
                                                     <tr>
                                                         <td>
                                                             <?php
-                                                            //echo $product['name'] . "<br>";
+                                                            //echo $product_bought['name'] . "<br>";
                                                             ?>
                                                         </td>
                                                         <td>
                                                             <?php
-                                                           // echo formatPrice($iphone['price']) . "<br>";
+
                                                             ?>
                                                         </td>
 
                                                         <td>
                                                             <?php
                                                             foreach ($_POST as $key => $quantity){
-                                                            echo totalProductPrice($quantity, $product[$key]['price']);
-                                                            die();
+                                                                if ($quantity >= 1){
+                                                                    echo $quantity . "<br>";
+                                                                }
                                                             }
-                                                            var_dump($product);
-                                                            var_dump($_POST);
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php
+                                                            foreach ($_POST as $key_post => $quantity){
+                                                               //echo "key : " . $key_post . "<br>";
+                                                                //echo "quantity : " . $quantity . "<br><br>";
+                                                                if ($quantity >= 1) {
+                                                                    foreach ($products as $key_product => $product) {
+                                                                        //echo $key_product;
+                                                                        if($key_post === $key_product){
+                                                                            echo totalProductPrice($product['price'], $quantity) . "<br>";
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            //var_dump($products);
                                                             ?>
                                                         </td>
                                                     </tr>

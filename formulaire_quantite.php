@@ -6,9 +6,7 @@
     //include "my-functions.php";
     global $products;
     global $product;
-    global $iphone;
-    global $ipad;
-    global $imac;
+
 
 
     /* for test to PHP if not hosted */ //require('my-functions.php');
@@ -60,11 +58,13 @@
                                                         <?php
                                                         foreach ($products as $key => $product){
                                                             echo ' <div class="form-group mb-0">';
-                                                            echo  "<input min='0' name='.$key.' type='number'>";
+                                                            echo $key;
+                                                            echo  "<input min='0' name='".$key."' type='number'>";
                                                             echo '</div>';
 
-                                                            var_dump($key);
-                                                                                                                    }
+                                                            //var_dump($key);
+
+                                                        }
                                                         ?>
                                                     </td>
                                                     <td>
