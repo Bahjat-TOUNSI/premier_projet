@@ -58,7 +58,6 @@
                                                         <?php
                                                         foreach ($products as $key => $product){
                                                             echo ' <div class="form-group mb-0">';
-                                                            echo $key;
                                                             echo  "<input min='0' name='".$key."' type='number'>";
                                                             echo '</div>';
 
