@@ -7,7 +7,7 @@ include 'header.php';
 global $products;
 global $product;
 
-//print_r($_POST);
+//var_dump($_POST);
 ?>
 
 <div class="container mt-2 mb-5">
@@ -31,7 +31,7 @@ global $product;
                                                     <thead>
                                                     <tr>
                                                         <th scope="col">Product</th>
-                                                        <th scope="col">Price</th>
+<!--                                                        <th scope="col">Price</th>-->
                                                         <th scope="col">Quantity</th>
                                                         <th scope="col" class="text-right">Total</th>
                                                     </tr>
@@ -40,20 +40,22 @@ global $product;
                                                     <tr>
                                                         <td>
                                                             <?php
-                                                            //echo $product_bought['name'] . "<br>";
+                                                            foreach ($_POST as $key =>$product){
+                                                                if ($product >= 1){
+                                                                    echo $key . "<br>";
+                                                                }
+                                                            }
                                                             ?>
                                                         </td>
-                                                        <td>
-                                                            <?php
+<!--                                                        <td>-->
 
-                                                            ?>
-                                                        </td>
+<!--                                                        </td>-->
 
                                                         <td>
                                                             <?php
                                                             foreach ($_POST as $key => $quantity){
                                                                 if ($quantity >= 1){
-                                                                    echo $quantity . "<br>";
+                                                                    echo $quantity .  "<br>";
                                                                 }
                                                             }
                                                             ?>
@@ -67,7 +69,7 @@ global $product;
                                                                     foreach ($products as $key_product => $product) {
                                                                         //echo $key_product;
                                                                         if($key_post === $key_product){
-                                                                            echo totalProductPrice($product['price'], $quantity) . "<br>";
+                                                                            echo totalProductPrice($product['price'], $quantity) . " €" . "<br>";
                                                                         }
                                                                     }
                                                                 }
