@@ -33,7 +33,9 @@ global $product;
                                                         <th scope="col">Product</th>
 <!--                                                        <th scope="col">Price</th>-->
                                                         <th scope="col">Quantity</th>
-                                                        <th scope="col" class="text-right">Total</th>
+                                                        <th scope="col">Total</th>
+                                                        <th scope="col">Total HT</th>
+                                                        <th scope="col">TVA</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -42,7 +44,7 @@ global $product;
                                                             <?php
                                                             foreach ($_POST as $key =>$product){
                                                                 if ($product >= 1){
-                                                                    echo $key . "<br>";
+                                                                    echo $key . "<br><hr>";
                                                                 }
                                                             }
                                                             ?>
@@ -55,7 +57,7 @@ global $product;
                                                             <?php
                                                             foreach ($_POST as $key => $quantity){
                                                                 if ($quantity >= 1){
-                                                                    echo $quantity .  "<br>";
+                                                                    echo $quantity .  "<br><hr>";
                                                                 }
                                                             }
                                                             ?>
@@ -69,12 +71,26 @@ global $product;
                                                                     foreach ($products as $key_product => $product) {
                                                                         //echo $key_product;
                                                                         if($key_post === $key_product){
-                                                                            echo totalProductPrice($product['price'], $quantity) . " €" . "<br>";
+                                                                            echo totalProductPrice($product['price'], $quantity) . " €" . "<br><hr>";
                                                                         }
                                                                     }
                                                                 }
                                                             }
                                                             //var_dump($products);
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php
+                                                            foreach ($_POST as $key_post => $quantity){
+                                                                if ($quantity >= 1) {
+                                                                    foreach ($products as $key_product => $product) {
+                                                                        if($key_post === $key_product){
+                                                                            echo priceExcludingVAT($product['price'], $quantity) . " €" . "<br><hr>";
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+
                                                             ?>
                                                         </td>
                                                     </tr>
