@@ -16,7 +16,10 @@
         include "header.php";
         //include "books.php";
         //include "formulaire_quantite.php";
+        include "database.php";
+    
         include "footer.php";
+
     ?>
 
 </body>
