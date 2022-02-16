@@ -27,7 +27,7 @@ function order_name_price($db){
                             ON customers.id = customer_id
                             WHERE customers.first_name = "Charlize"
                             GROUP BY orders.number');
-    $list -> execute();
+    $list->execute();
     $order_name_price = $list -> fetchall(PDO::FETCH_ASSOC);
     return $order_name_price;
 }
@@ -40,7 +40,15 @@ function order_price($db){
                             INNER JOIN orders 
                             ON order_id = orders.id 
                             GROUP BY number');
-    $list -> execute();
+    $list->execute();
     $order_price = $list -> fetchall(PDO::FETCH_ASSOC);
     return $order_price;
+}
+
+function insert_new_customer($db){
+    $db->query("INSERT INTO customers (first_name, last_name, email) VALUES ('bahjat', 'tounsi', 'bahjat@gmail.com')");
+}
+
+function change_product_quantity($db){
+    $db->query("UPDATE products SET quantity = 5 WHERE id = 1");
 }

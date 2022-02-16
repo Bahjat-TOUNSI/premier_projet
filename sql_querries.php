@@ -18,7 +18,7 @@
 <?php
 print_r(display_products($db));
 
-
+change_product_quantity($db);
 ?>
 </pre>
 
