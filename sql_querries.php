@@ -16,7 +16,7 @@
 
 <pre>
 <?php
-print_r(order_name_price($db));
+print_r(display_products($db));
 
 
 ?>
