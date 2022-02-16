@@ -1,3 +1,4 @@
 .idea/
 .vscode/
 pics/
+db_connection.php
