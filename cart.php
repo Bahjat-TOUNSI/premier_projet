@@ -1,7 +1,5 @@
 <?php
-//echo "Quantity ordered: " . $_GET['quantity'];
 include 'multidimensional-catalog.php';
-//include 'catalog-with-keys.php';
 include 'bootstraplinks.php';
 include 'header.php';
 global $products;
@@ -39,22 +37,16 @@ foreach ($_POST as $key => $value){
                                                     <thead>
                                                     <tr>
                                                         <th scope="col">Product</th>
-<!--                                                        <th scope="col">Price</th>-->
                                                         <th scope="col">Quantity</th>
                                                         <th scope="col">Total</th>
                                                         <th scope="col">Total HT</th>
-<!--                                                        <th scope="col">TVA</th>-->
-
                                                     </tr>
                                                     </thead>
                                                     <tbody>
 
                                                     <?php
                                                     if (isset($_POST) && !empty($_POST)){
-
-
                                                     ?>
-
 
                                                     <tr>
                                                         <td>
@@ -65,10 +57,6 @@ foreach ($_POST as $key => $value){
                                                             }
                                                             ?>
                                                         </td>
-<!--                                                        <td>-->
-
-<!--                                                        </td>-->
-
                                                         <td>
                                                             <?php
                                                             foreach ($_POST as $key => $quantity){
@@ -148,8 +136,4 @@ foreach ($_POST as $key => $value){
                                                 </table>
                                             </div>
                                         </div>
-<!--                                        <div class="cart-footer text-right">-->
-<!--                                            <button type="submit" name="submit_iphone" class="btn btn-info my-1"><i-->
-<!--                                                    class="ri-save-line mr-2"></i>Validation</button>-->
-<!--                                        </div>-->
                                     </div>
