@@ -14,7 +14,7 @@ function displayDiscountedPrice($promo){
     echo "<h5>" . ($promo / 100) * 0.25 . "</h5>";
 }
 
-function totalProductPrice($quantity, $price): float|int
+function totalProductPrice(int $quantity, $price): float|int
 {
     return ($quantity * $price) / 100;
 }

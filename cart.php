@@ -6,6 +6,7 @@ include 'bootstraplinks.php';
 include 'header.php';
 global $products;
 global $product;
+global $totalTTC;
 
 //var_dump($_POST);
 ?>
@@ -35,17 +36,17 @@ global $product;
                                                         <th scope="col">Quantity</th>
                                                         <th scope="col">Total</th>
                                                         <th scope="col">Total HT</th>
-                                                        <th scope="col">TVA</th>
+<!--                                                        <th scope="col">TVA</th>-->
+
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
                                                         <td>
                                                             <?php
-                                                            foreach ($_POST as $key =>$product){
+                                                            foreach ($_POST as $key =>$product)
                                                                 if ($product >= 1){
                                                                     echo $key . "<br><hr>";
-                                                                }
                                                             }
                                                             ?>
                                                         </td>
@@ -65,18 +66,17 @@ global $product;
                                                         <td>
                                                             <?php
                                                             foreach ($_POST as $key_post => $quantity){
-                                                               //echo "key : " . $key_post . "<br>";
-                                                                //echo "quantity : " . $quantity . "<br><br>";
                                                                 if ($quantity >= 1) {
                                                                     foreach ($products as $key_product => $product) {
-                                                                        //echo $key_product;
                                                                         if($key_post === $key_product){
-                                                                            echo totalProductPrice($product['price'], $quantity) . " €" . "<br><hr>";
+                                                                            $productTotal = totalProductPrice($product['price'], $quantity);
+                                                                            $totalTTC += $productTotal;
+                                                                            echo $productTotal . " €" . "<br><hr>";
                                                                         }
                                                                     }
+
                                                                 }
                                                             }
-                                                            //var_dump($products);
                                                             ?>
                                                         </td>
                                                         <td>
@@ -91,6 +91,13 @@ global $product;
                                                                 }
                                                             }
 
+                                                            ?>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td><strong>Total commande TTC :</strong>
+                                                            <?php
+                                                            echo $totalTTC . " €";
                                                             ?>
                                                         </td>
                                                     </tr>
