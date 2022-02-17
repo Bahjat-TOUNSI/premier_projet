@@ -7,6 +7,7 @@ include 'header.php';
 global $products;
 global $product;
 global $totalTTC;
+global $totalHt;
 
 //var_dump($_POST);
 ?>
@@ -25,7 +26,6 @@ global $totalTTC;
                         <div class="row justify-content-center">
                             <div class="col-lg-10 col-xl-8">
                                 <div class="cart-container">
-                                    <form method="get" action="cart.php">
                                         <div class="cart-head">
                                             <div class="table-responsive">
                                                 <table class="table table-borderless">
@@ -41,6 +41,11 @@ global $totalTTC;
                                                     </tr>
                                                     </thead>
                                                     <tbody>
+
+                                                    <?php
+
+                                                    ?>
+
                                                     <tr>
                                                         <td>
                                                             <?php
@@ -85,7 +90,9 @@ global $totalTTC;
                                                                 if ($quantity >= 1) {
                                                                     foreach ($products as $key_product => $product) {
                                                                         if($key_post === $key_product){
-                                                                            echo priceExcludingVAT($product['price'], $quantity) . " €" . "<br><hr>";
+                                                                            $productHtTotal = priceExcludingVAT($product['price'], $quantity);
+                                                                            $totalHt += $productHtTotal;
+                                                                            echo $productHtTotal . "€" . "<br><hr>";
                                                                         }
                                                                     }
                                                                 }
@@ -94,10 +101,21 @@ global $totalTTC;
                                                             ?>
                                                         </td>
                                                     </tr>
+
+
                                                     <tr>
                                                     <td><strong>Total commande TTC :</strong>
                                                             <?php
+                                                            if($totalTTC ==!0){
                                                             echo $totalTTC . " €";
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td><strong>Total commande HT :</strong>
+                                                            <?php
+                                                            if($totalHt ==!0){
+                                                                echo $totalHt . " €";
+                                                            }
                                                             ?>
                                                         </td>
                                                     </tr>
@@ -109,4 +127,4 @@ global $totalTTC;
 <!--                                            <button type="submit" name="submit_iphone" class="btn btn-info my-1"><i-->
 <!--                                                    class="ri-save-line mr-2"></i>Validation</button>-->
 <!--                                        </div>-->
-                                    </form>
+                                    </div>
