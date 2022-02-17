@@ -8,7 +8,7 @@ global $totalTTC;
 global $totalHt;
 
 //var_dump($_POST);
-
+// unsetting $_POST
 foreach ($_POST as $key => $value){
     if($value === "" || $value === "0"){
         unset($_POST[$key]);
@@ -45,6 +45,7 @@ foreach ($_POST as $key => $value){
                                                     <tbody>
 
                                                     <?php
+                                                    //cart empty error part 1
                                                     if (isset($_POST) && !empty($_POST)){
                                                     ?>
 
@@ -100,6 +101,7 @@ foreach ($_POST as $key => $value){
                                                         </td>
                                                     </tr>
                                                     <?php
+                                                        //cart empty error part 2
                                                     }else{
                                                         ?>
                                                         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
