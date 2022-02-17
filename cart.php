@@ -10,6 +10,13 @@ global $totalTTC;
 global $totalHt;
 
 //var_dump($_POST);
+
+foreach ($_POST as $key => $value){
+    if($value === "" || $value === "0"){
+        unset($_POST[$key]);
+    }
+}
+//var_dump($_POST);
 ?>
 
 <div class="container mt-2 mb-5">
@@ -43,8 +50,11 @@ global $totalHt;
                                                     <tbody>
 
                                                     <?php
+                                                    if (isset($_POST) && !empty($_POST)){
+
 
                                                     ?>
+
 
                                                     <tr>
                                                         <td>
@@ -101,8 +111,18 @@ global $totalHt;
                                                             ?>
                                                         </td>
                                                     </tr>
-
-
+                                                    <?php
+                                                    }else{
+                                                        ?>
+                                                        <div class="alert alert-danger" role="alert">
+                                                            <h4 class="alert-heading">Erreur !</h4>
+                                                            <p>Aucun article choisis.</p>
+                                                            <hr>
+                                                            <p class="mb-0">Merci de préciser les quantités.</p>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    ?>
                                                     <tr>
                                                     <td><strong>Total commande TTC :</strong>
                                                             <?php
