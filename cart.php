@@ -58,7 +58,6 @@ foreach ($_POST as $key => $value){
                                                             foreach ($_POST as $key =>$product)
                                                                 if ($product >= 1){
                                                                     add_order($db);
-
                                                                     echo $key . "<br><hr>";
                                                             }
                                                             ?>

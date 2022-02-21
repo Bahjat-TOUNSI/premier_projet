@@ -1,13 +1,10 @@
 <?php
-    include('multidimensional-catalog.php');
+    include'multidimensional-catalog.php';
     include 'catalog-with-keys.php';
     include 'bootstraplinks.php';
     include 'header.php';
-    include 'database.php';
-    //include "my-functions.php";
     global $products;
     global $product;
-    global $db;
 
 ?>
 
@@ -72,9 +69,7 @@
                                     <div class="cart-footer text-right">
                                         <button type="submit" name="valider panier" class="btn btn-info my-1"><i
                                                 class="ri-save-line mr-2"></i>Ajouter au panier</button>
-
                                     </div>
-
                                          </form>
                                 </div>
                             </div>
