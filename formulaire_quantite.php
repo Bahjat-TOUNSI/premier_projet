@@ -3,9 +3,11 @@
     include 'catalog-with-keys.php';
     include 'bootstraplinks.php';
     include 'header.php';
+    include 'database.php';
     //include "my-functions.php";
     global $products;
     global $product;
+    global $db;
 
 ?>
 
@@ -32,7 +34,6 @@
                                                         <th scope="col">Product</th>
                                                         <th scope="col">Price</th>
                                                         <th scope="col">Quantity</th>
-
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -69,9 +70,13 @@
                                         </div>
                                     </div>
                                     <div class="cart-footer text-right">
-                                        <button type="submit" class="btn btn-info my-1"><i
+                                        <button type="submit" name="valider panier" class="btn btn-info my-1"><i
                                                 class="ri-save-line mr-2"></i>Ajouter au panier</button>
+                                        <?php
+                                        add_order($db);
+                                        ?>
                                     </div>
+
                                          </form>
                                 </div>
                             </div>

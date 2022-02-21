@@ -19,7 +19,7 @@ include "header.php";
 //include "books.php";
 //include "formulaire_quantite.php";
 
-var_dump(bahjat($db));
+
 
 include "footer.php";
 

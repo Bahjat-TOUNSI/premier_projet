@@ -52,3 +52,7 @@ function insert_new_customer($db){
 function change_product_quantity($db){
     $db->query("UPDATE products SET quantity = 5 WHERE id = 1");
 }
+
+function add_order($db){
+    $db->query("INSERT INTO orders (customer_id, number, description) VALUES ('2','569855','added from panier')");
+}
