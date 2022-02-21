@@ -2,10 +2,12 @@
 include 'multidimensional-catalog.php';
 include 'bootstraplinks.php';
 include 'header.php';
+include 'database.php';
 global $products;
 global $product;
 global $totalTTC;
 global $totalHt;
+global $db;
 
 //var_dump($_POST);
 // unsetting $_POST
@@ -47,6 +49,7 @@ foreach ($_POST as $key => $value){
                                                     <?php
                                                     //cart empty error part 1
                                                     if (isset($_POST) && !empty($_POST)){
+
                                                     ?>
 
                                                     <tr>
@@ -54,6 +57,8 @@ foreach ($_POST as $key => $value){
                                                             <?php
                                                             foreach ($_POST as $key =>$product)
                                                                 if ($product >= 1){
+                                                                    add_order($db);
+
                                                                     echo $key . "<br><hr>";
                                                             }
                                                             ?>

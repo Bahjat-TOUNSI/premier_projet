@@ -72,9 +72,7 @@
                                     <div class="cart-footer text-right">
                                         <button type="submit" name="valider panier" class="btn btn-info my-1"><i
                                                 class="ri-save-line mr-2"></i>Ajouter au panier</button>
-                                        <?php
-                                        add_order($db);
-                                        ?>
+
                                     </div>
 
                                          </form>

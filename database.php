@@ -54,5 +54,5 @@ function change_product_quantity($db){
 }
 
 function add_order($db){
-    $db->query("INSERT INTO orders (customer_id, number, description) VALUES ('2','569855','added from panier')");
+    $db->query("INSERT INTO orders (customer_id, number, description) VALUES ('5','569855','added from panier')");
 }
