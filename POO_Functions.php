@@ -4,13 +4,13 @@ function displayProducts(Item $item)
 {
     return '<div class="card">
     <div class="card-body">
-      <h1>' . $item->getName() . '</h1>
-<p>' . $item->getDescription() . '</p>
-<p>' . $item->getPrice() . '</p>
-<p>' . $item->getImageUrl() . '</p>
-<p>' . $item->getWeight() . '</p>
-<p>' . $item->getStock() . '</p>
-<p>' . $item->isAvailable() . '</p>
+      <h1>' . "Product name: " . $item->getName() . '</h1>
+<p>' . "Product description: " . $item->getDescription() . '</p>
+<p>' . "Product price: " . $item->getPrice() . '</p>
+<p>' . "Product image: " . $item->getImageUrl() . '</p>
+<p>' . "Product weight: " . $item->getWeight() . '</p>
+<p>' . "Product stock quantity: " . $item->getStock() . '</p>
+<p>' . "Product available: " . $item->isAvailable() . '</p>
 </div>
 </div>';
 }
@@ -39,9 +39,9 @@ function displayClients(Client $client)
 {
     return '<div class="card">
     <div class="card-body">
-      <h1>' . $client->getFirstName() . " " . $client->getLastName() . '</h1>
-<p>' . $client->getEmail() . '</p>
-<p>' . $client->getDateCreated() . '</p>
+      <h1>' . "Name: " . $client->getFirstName() . " " . $client->getLastName() . '</h1>
+<p>' . "Email: " . $client->getEmail() . '</p>
+<p>' . "Account created on: " . $client->getDateCreated() . '</p>
 </div>
 </div>';
 }
