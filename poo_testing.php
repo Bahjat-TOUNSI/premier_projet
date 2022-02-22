@@ -5,21 +5,16 @@ GLOBAL $db;
 include 'Item.php';
 include 'POO_Functions.php';
 include 'Catalogue.php';
+include 'ClientList.php';
+include 'Client.php';
 
 
 
-$item = new Item();
-$item->setName('Iphone');
-$name = $item->getName();
-?>
+//$catalog = new Catalogue($db);
+//echo displayCatalog($catalog);
 
-<!--<h1> --><?//= $name ?><!-- </h1>-->
-
-
-<?php
-
-$catalog = new Catalogue($db);
-echo displayCatalog($catalog);
+$client = new ClientList($db);
+echo displayClient($client);
 
 
 

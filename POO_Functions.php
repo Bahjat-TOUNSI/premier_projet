@@ -1,14 +1,5 @@
 <?php
 
-
-//function display_Item(Item $item){
-//
-//    return '<h1>' . $item->name . '</h1>';
-
-//    echo $item;
-//    var_dump($item);
-//}
-
 function displayProducts(Item $item)
 {
     return '<div class="card">
@@ -44,3 +35,30 @@ function displayCatalog(Catalogue $catalog)
     return $html;
 }
 
+function displayClients(Client $client)
+{
+    return '<div class="card">
+    <div class="card-body">
+      <h1>' . $client->getFirstName() . " " . $client->getLastName() . '</h1>
+<p>' . $client->getEmail() . '</p>
+<p>' . $client->getDateCreated() . '</p>
+</div>
+</div>';
+}
+
+function displayClient(ClientList $client)
+{
+    $html = '';
+
+    foreach ($client->getCustomers() as $customer) {
+        $item = new Client();
+        $item->setFirstName($customer['first_name']);
+        $item->setLastName($customer['last_name']);
+        $item->setEmail($customer['email']);
+        $item->setDateCreated($customer['account_created']);
+
+        $html .= displayClients($item);
+    }
+
+    return $html;
+}
