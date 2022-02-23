@@ -36,32 +36,6 @@ function displayCatalog(Catalogue $catalog)
     return $html;
 }
 
-//description
-function displayProductsCategory(Category $category)
-{
-
-    return '<div class="card">
-    <div class="card-body">
-      <p>' . "Category name: " . $category->getCategoryName() . '</p>
-      <p>' . "Category description: " . $category->getCategoryDescription() . '</p>
-</div>
-</div>';
-}
-
-
-function displayCatalogCategory(CategoryList $category)
-
-{
-    $html = '';
-    foreach ($category->getCategories() as $cat) {
-            $item2 = new Category();
-            $item2->setCategoryName($cat['name']);
-            $item2->setCategoryDescription($cat['description']);
-            $html .= displayProductsCategory($item2);
-    }
-        return $html;
-
-}
 
 //clients
 function displayClients(Client $client)
