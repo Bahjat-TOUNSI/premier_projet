@@ -7,8 +7,7 @@ include 'POO_Functions.php';
 include 'Catalogue.php';
 include 'ClientList.php';
 include 'Client.php';
-include 'CategoryList.php';
-include 'Category.php';
+include 'ItemSpec.php';
 
 
 

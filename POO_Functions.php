@@ -1,7 +1,7 @@
 <?php
 
 //products
-function displayProducts(Item $item)
+function displayProducts(ItemSpec $item)
 {
     return '<div class="card">
     <div class="card-body">
@@ -12,6 +12,7 @@ function displayProducts(Item $item)
 <p>' . "Product weight: " . $item->getWeight() . '</p>
 <p>' . "Product stock quantity: " . $item->getStock() . '</p>
 <p>' . "Product available: " . $item->isAvailable() . '</p>
+<p>' . "Product color: " . $item->getColor() . '</p>
 </div>
 </div>';
 }
@@ -21,7 +22,7 @@ function displayCatalog(Catalogue $catalog)
         $html = '';
 
     foreach ($catalog->getProducts() as $product) {
-        $item = new Item();
+        $item = new ItemSpec();
         $item->setName($product['name']);
         $item->setDescription($product['description']);
         $item->setPrice($product['price']);
@@ -29,12 +30,14 @@ function displayCatalog(Catalogue $catalog)
         $item->setWeight($product['weight']);
         $item->setStock($product['quantity']);
         $item->setAvailable($product['available']);
+        $item->setColor($product['color_id']);
 
         $html .= displayProducts($item);
     }
 
     return $html;
 }
+
 
 
 //clients
