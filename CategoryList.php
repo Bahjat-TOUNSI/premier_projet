@@ -12,11 +12,14 @@ class CategoryList
         $this->categories = $categoriesStatement->fetchAll(PDO::FETCH_ASSOC);
     }
 
+
+
     /**
      * @return array
      */
     public function getCategories()
     {
+
         return $this->categories;
     }
 }

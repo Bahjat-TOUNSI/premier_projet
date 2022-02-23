@@ -1,5 +1,6 @@
 <?php
 
+//products
 function displayProducts(Item $item)
 {
     return '<div class="card">
@@ -17,7 +18,7 @@ function displayProducts(Item $item)
 
 function displayCatalog(Catalogue $catalog)
 {
-    $html = '';
+        $html = '';
 
     foreach ($catalog->getProducts() as $product) {
         $item = new Item();
@@ -26,7 +27,7 @@ function displayCatalog(Catalogue $catalog)
         $item->setPrice($product['price']);
         $item->setImageUrl($product['image']);
         $item->setWeight($product['weight']);
-        $item->setStock($product['stock']);
+        $item->setStock($product['quantity']);
         $item->setAvailable($product['available']);
 
         $html .= displayProducts($item);
@@ -35,6 +36,34 @@ function displayCatalog(Catalogue $catalog)
     return $html;
 }
 
+//description
+function displayProductsCategory(Category $category)
+{
+
+    return '<div class="card">
+    <div class="card-body">
+      <p>' . "Category name: " . $category->getCategoryName() . '</p>
+      <p>' . "Category description: " . $category->getCategoryDescription() . '</p>
+</div>
+</div>';
+}
+
+
+function displayCatalogCategory(CategoryList $category)
+
+{
+    $html = '';
+    foreach ($category->getCategories() as $cat) {
+            $item2 = new Category();
+            $item2->setCategoryName($cat['name']);
+            $item2->setCategoryDescription($cat['description']);
+            $html .= displayProductsCategory($item2);
+    }
+        return $html;
+
+}
+
+//clients
 function displayClients(Client $client)
 {
     return '<div class="card">

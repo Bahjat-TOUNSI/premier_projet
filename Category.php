@@ -1,40 +1,41 @@
 <?php
 
-class Category
+class Category extends Item
 {
-    protected string $name;
-    protected string $description;
+    protected string $category_name;
+    protected string $category_description;
 
     /**
      * @return string
      */
-    public function getName(): string
+    public function getCategoryName(): string
     {
-        return $this->name;
+        return $this->category_name;
     }
 
     /**
-     * @param string $name
+     * @param string $category_name
      */
-    public function setName(string $name): void
+    public function setCategoryName(string $category_name): void
     {
-        $this->name = $name;
+        $this->category_name = $category_name;
     }
 
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getCategoryDescription(): string
     {
-        return $this->description;
+        return $this->category_description;
     }
 
     /**
-     * @param string $description
+     * @param string $category_description
      */
-    public function setDescription(string $description): void
+    public function setCategoryDescription(string $category_description): void
     {
-        $this->description = $description;
+        $this->category_description = $category_description;
     }
+
 
 }
