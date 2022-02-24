@@ -3,18 +3,19 @@
 //products
 function displayProducts(ItemSpec $item)
 {
-    return '<div class="card">
-    <div class="card-body">
-      <h1>' . "Product name: " . $item->getName() . '</h1>
-<p>' . "Product description: " . $item->getDescription() . '</p>
-<p>' . "Product price: " . $item->getPrice() . '</p>
-<p>' . "Product image: " . $item->getImageUrl() . '</p>
-<p>' . "Product weight: " . $item->getWeight() . '</p>
-<p>' . "Product stock quantity: " . $item->getStock() . '</p>
-<p>' . "Product available: " . $item->isAvailable() . '</p>
-<p>' . "Product color: " . $item->getColor() . '</p>
-</div>
-</div>';
+    return
+        '<div class="card">
+            <div class="card-body">
+              <h2>' . "Product name: " . $item->getName() . '</h2>
+                <p>' . "Product description: " . $item->getDescription() . '</p>
+                <p>' . "Product price: " . $item->getPrice() . '</p>
+                <p>' . "Product image: " . $item->getImageUrl() . '</p>
+                <p>' . "Product weight: " . $item->getWeight() . '</p>
+                <p>' . "Product stock quantity: " . $item->getStock() . '</p>
+                <p>' . "Product available: " . $item->isAvailable() . '</p>
+                <p>' . "Product color: " . $item->getColor() . '</p>
+            </div>
+        </div>';
 }
 
 function displayCatalog(Catalogue $catalog)
@@ -30,7 +31,7 @@ function displayCatalog(Catalogue $catalog)
         $item->setWeight($product['weight']);
         $item->setStock($product['quantity']);
         $item->setAvailable($product['available']);
-        $item->setColor($product['color_id']);
+        $item->setColor($product['color']);
 
         $html .= displayProducts($item);
     }

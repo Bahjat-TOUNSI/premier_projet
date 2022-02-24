@@ -6,10 +6,15 @@ class Catalogue
 
     public function __construct($db)
     {
-        $productsStatement = $db->prepare('SELECT * FROM products');
+        $productsStatement = $db->prepare('SELECT *, color.color
+                                            FROM products
+                                            RIGHT OUTER JOIN color
+                                            on color.id = color_id
+                                            GROUP BY color.color');
 
         $productsStatement->execute();
         $this->products = $productsStatement->fetchAll(PDO::FETCH_ASSOC);
+
     }
 
     /**
